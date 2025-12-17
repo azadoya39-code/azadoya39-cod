@@ -1,0 +1,19 @@
+# Настройки для проверки кода
+repos:
+  # Откуда брать правила
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    # Какая версия
+    rev: v4.5.0
+    # Что проверять
+    hooks:
+      # Удаляет пробелы в конце строк
+      - id: trailing-whitespace
+      
+      # Добавляет пустую строку в конце файла
+      - id: end-of-file-fixer
+      
+      # Проверяет YAML файлы
+      - id: check-yaml
+      
+      # Не пускает большие файлы
+      - id: check-added-large-files

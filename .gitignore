@@ -1,0 +1,23 @@
+# Python временные файлы
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения
+venv/
+env/
+.venv/
+
+# Переменные окружения
+.env
+.env.local
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Файлы системы
+.DS_Store
+Thumbs.db
