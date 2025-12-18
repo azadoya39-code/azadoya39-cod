@@ -14,6 +14,24 @@ repos:
       
       # Проверяет YAML файлы
       - id: check-yaml
-      
-      # Не пускает большие файлы
-      - id: check-added-large-files
+
+  # black - форматирование кода
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3
+
+  # isort - сортировка импортов
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+
+  # ruff - линтинг
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
